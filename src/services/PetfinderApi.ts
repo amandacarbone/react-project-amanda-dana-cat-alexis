@@ -10,11 +10,12 @@ export function login() {
 
     bodyFormData.append('client_secret', process.env.REACT_APP_PETFINDER_SECRET_KEY!);
 
+
     return axios({
         method: "post",
         url: "https://api.petfinder.com/v2/oauth2/token",
         data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { "Content-Type": "multipart/form-data"},
       })
         .then(function (response) {
           //handle success
@@ -37,7 +38,8 @@ export async function getAnimalsByType(type: string) {
         type: type
     },
     headers: {
-        "Authorization" : `Bearer ${accessToken}`
+        "Authorization" : `Bearer ${accessToken}`,
+       
     }
     })
     console.log(response.data)
