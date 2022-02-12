@@ -1,21 +1,10 @@
-import { ReactNode, useState } from "react";
-// import FavoritesContext from "./FavoritesContext";
+export function FavoritesContextProvider(){
 
-// export function FavoritesContextProvider(props: { children: ReactNode }){
 
-//     const [favorites, setFavorites] = useState<Pet[]>([]);
+    return(
+        <div>
 
-//     function addPet(pet: Pet) {
-//         setFavorites([...pets, pet]);
-//     }
+        </div>
+    )
+}
 
-//     function removePet(id: string) {
-//         setFavorites(favorites.filter(f => f.id != id));
-//     }
-
-//     return(
-//         <FavoritesContext.Provider value={{favorites, addPet, removePet}}>
-//             {props.children}
-//         </FavoritesContext.Provider>
-//     );
-// }

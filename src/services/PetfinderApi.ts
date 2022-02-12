@@ -31,6 +31,7 @@ export function login() {
 export async function getAnimalsByType(type: string) {
 
     const accessToken = await login();
+  
 
     const response = await axios
     .get("https://api.petfinder.com/v2/animals", {

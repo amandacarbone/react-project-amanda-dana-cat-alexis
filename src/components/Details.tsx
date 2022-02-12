@@ -15,12 +15,14 @@ export function Details(){
 
     return(
         <div>
+           
             <ul>
             {dogs.map((dog) =>
             <li key={dog.id}>{dog.name}
             <img src={dog.photos[0]?.large}/>
             </li>)}
             </ul>
+           
         </div>
     )
 }
