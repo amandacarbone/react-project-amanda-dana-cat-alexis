@@ -1,15 +1,15 @@
 import { createContext } from "react";
 
 // interface FavoritesContext {
-//     favorites: Pet[];
-//     addPet: (pet: Pet) => void;
-//     removePet: (id: string) => void;
+//     favorites: Dog[];
+//     addFavorite: (dog: Dog) => void;
+//     removeFavorite: (id: string) => void;
 // }
 
 // const defaultValue: FavoritesContext = {
 //     favorites: [],
-//     addPet: () => {},
-//     removePet: () => {}
+//     addFavorite: () => {},
+//     removeRemoveFavorite: () => {}
 // }
 
 // const FavoritesContext = createContext<FavoritesContext>(defaultValue);

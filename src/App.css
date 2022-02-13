@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.nav a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.material-icons {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
