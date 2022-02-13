@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
+import FavoritesContext from "../contexts/FavoritesContext";
+import { Animals } from "../models/Animals";
 import { getAnimalsByType, login } from "../services/PetfinderApi";
+import { Favorites } from "./Favorites";
 
 export function Profiles() {
 
-    const [dogs, setDogs] = useState<any[]>([]);
+    const [dogs, setDogs] = useState<Animals[]>([]);
+
+    const { addFavorite } = useContext(FavoritesContext);
 
     useEffect(() => {
 
@@ -17,9 +22,10 @@ export function Profiles() {
         <div>
            
             <ul>
-            {dogs.map((dog) =>
+            {dogs.map(dog =>
             <li key={dog.id}>{dog.name}
-            <img src={dog.photos[0]?.large}/>
+            <img src={dog.primary_photo_cropped?.small && dog.primary_photo_cropped?.medium && dog.primary_photo_cropped?.large}/>
+            <button onClick={() => addFavorite(dog)}>Add Favorite</button>
             </li>)}
             </ul>
            

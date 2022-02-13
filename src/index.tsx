@@ -7,10 +7,11 @@ import { Search } from './components/Search';
 import { Favorites } from './components/Favorites';
 import { Profiles } from './components/Profiles';
 import { LogIn } from './components/LogIn';
-// import { FavoritesContextProvider } from "./contexts/FavoritesContextProvider";
+import { FavoritesContextProvider } from './contexts/FavoritesContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <FavoritesContextProvider>
     <BrowserRouter>
     <App />
     <Routes>
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Route path="/login" element={<LogIn/>} />
     </Routes>
     </BrowserRouter>
+    </FavoritesContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
