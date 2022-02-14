@@ -1,51 +1,51 @@
 import axios from "axios";
+import { Animals } from "../models/Animals";
 
 export function login() {
+  var bodyFormData = new FormData();
 
-    var bodyFormData = new FormData();
+  bodyFormData.append("grant_type", "client_credentials");
 
-    bodyFormData.append('grant_type', 'client_credentials');
+  bodyFormData.append("client_id", process.env.REACT_APP_PETFINDER_API_KEY!);
 
-    bodyFormData.append('client_id', process.env.REACT_APP_PETFINDER_API_KEY!);
+  bodyFormData.append(
+    "client_secret",
+    process.env.REACT_APP_PETFINDER_SECRET_KEY!
+  );
 
-    bodyFormData.append('client_secret', process.env.REACT_APP_PETFINDER_SECRET_KEY!);
-
-
-    return axios({
-        method: "post",
-        url: "https://api.petfinder.com/v2/oauth2/token",
-        data: bodyFormData,
-        headers: { "Content-Type": "multipart/form-data"},
-      })
-        .then(function (response) {
-          //handle success
-          console.log(response)
-          return response.data.access_token;
-        })
-        .catch(function (response) {
-          //handle error
-          console.log(response);
-        });
+  return axios({
+    method: "post",
+    url: "https://api.petfinder.com/v2/oauth2/token",
+    data: bodyFormData,
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  })
+    .then(function (response) {
+      //handle success
+      console.log(response);
+      return response.data.access_token;
+    })
+    .catch(function (response) {
+      //handle error
+      console.log(response);
+    });
 }
 
 export async function getAnimalsByType(type: string) {
+  const accessToken = await login();
 
-    const accessToken = await login();
-  
-
-    const response = await axios
-    .get("https://api.petfinder.com/v2/animals", {
+  const response = await axios.get("https://api.petfinder.com/v2/animals", {
     params: {
-        type: type
+      type: type,
     },
     headers: {
-        "Authorization" : `Bearer ${accessToken}`,
-       
-    }
-    })
-    console.log(response.data)
-    return response.data
-
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+  return response.data.animals.filter(
+    (dog: Animals): boolean => dog.primary_photo_cropped !== null
+  );
 }
 
 // const credentials = {
@@ -74,5 +74,5 @@ export async function getAnimalsByType(type: string) {
 //         .get<any>(`https://api.petfinder.com/v2/animals?type=dog`, {
 //         headers: { "Authorization" : `Bearer {${token}}` }
 //     }).then(response => response.data)
-    
+
 // }
