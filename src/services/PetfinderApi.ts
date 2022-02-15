@@ -38,6 +38,7 @@ export async function getAnimalsByType(type: string) {
   const response = await axios.get("https://api.petfinder.com/v2/animals", {
     params: {
       type: type,
+      limit: 100,
     },
     headers: {
       Authorization: `Bearer ${accessToken}`,

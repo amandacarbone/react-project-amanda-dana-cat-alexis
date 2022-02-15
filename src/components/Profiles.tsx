@@ -32,22 +32,26 @@ export function Profiles() {
   const handleRightClick = () => {
     if (dogs && dogs.length > 0) {
       let newIndex = selectedDogIndex + 1;
+      console.log(newIndex, dogs.length);
       if (newIndex >= dogs.length) {
         newIndex = 0;
       }
       setSelectedDogIndex(newIndex);
-      setSelectedDog(dogs[selectedDogIndex]);
+      console.log("after setSelected", newIndex);
+      setSelectedDog(dogs[newIndex]);
+      console.log(selectedDogIndex);
     }
   };
 
   const handleLeftClick = () => {
     if (dogs && dogs.length > 0) {
-      let newIdx = selectedDogIndex - 1;
-      if (newIdx < 0) {
-        newIdx = dogs.length - 1;
+      let newIndex = selectedDogIndex - 1;
+      if (newIndex < 0) {
+        newIndex = dogs.length - 1;
       }
-      setSelectedDogIndex(newIdx);
-      setSelectedDog(dogs[selectedDogIndex]);
+      setSelectedDogIndex(newIndex);
+      setSelectedDog(dogs[newIndex]);
+      console.log(selectedDogIndex);
     }
   };
 
@@ -62,6 +66,15 @@ export function Profiles() {
             selectedDog?.primary_photo_cropped?.large
           }
         />
+        <p>
+          Age: {selectedDog?.age}
+          Size: {selectedDog?.size}
+          Gender: {selectedDog?.gender}
+          Fixed: {selectedDog?.attributes.spayed_neutered}
+          Shots: {selectedDog?.attributes.shots_current}
+          Good With Children: {selectedDog?.environment.children}
+          Description: {selectedDog?.description}
+        </p>
         <div className="carousel">
           <button className="button-left" onClick={handleLeftClick}>
             Prev
