@@ -4,9 +4,9 @@ import { Animals } from "../models/Animals";
 import { getAnimalsByType } from "../services/PetfinderApi";
 import { Favorites } from "./Favorites";
 import { Dog } from "../models/Dog";
+import "../App.css";
 
 export function ProfileItem() {
-
   const [dogs, setDogs] = useState<Animals[]>([]);
 
   const { addFavorite } = useContext(FavoritesContext);
@@ -20,7 +20,6 @@ export function ProfileItem() {
       setDogs(newDogs);
       setSelectedDog(newDogs[0]);
       console.log(newDogs);
-      //return data.animals;
     });
 
     if (dogs && dogs[0]) {
@@ -66,15 +65,22 @@ export function ProfileItem() {
             selectedDog?.primary_photo_cropped?.large
           }
         />
-        <p>
-          Age: {selectedDog?.age}
-          Size: {selectedDog?.size}
-          Gender: {selectedDog?.gender}
-          Fixed: {selectedDog?.attributes.spayed_neutered}
-          Shots: {selectedDog?.attributes.shots_current}
-          Good With Children: {selectedDog?.environment.children}
-          Description: {selectedDog?.description}
-        </p>
+        <div className="doggyDetails" key={selectedDog?.id}>
+          <p>Age: {selectedDog?.age}</p>
+          <p>Size: {selectedDog?.size}</p>
+          <p>Gender: {selectedDog?.gender}</p>
+          <p>
+            Fixed: {selectedDog?.attributes.spayed_neutered ? "true" : "false"}
+          </p>
+          <p>
+            Shots: {selectedDog?.attributes.shots_current ? "true" : "false"}
+          </p>
+          <p>
+            Good With Children:{" "}
+            {selectedDog?.environment.children ? "true" : "false"}
+          </p>
+          <p>Description: {selectedDog?.description}</p>
+        </div>
         <div className="carousel">
           <button className="button-left" onClick={handleLeftClick}>
             Prev
