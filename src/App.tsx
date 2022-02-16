@@ -15,7 +15,7 @@ function App() {
 
       <div className="header">
 
-        <h1>Tinder for Dogs</h1>
+        <h1>Rin Tin Tinder</h1>
 
         <button className="material-icons" onClick={() => setNav({isPaneOpen: true})}>menu</button>
 

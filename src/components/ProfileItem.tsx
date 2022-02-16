@@ -2,8 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import FavoritesContext from "../contexts/FavoritesContext";
 import { Animals } from "../models/Animals";
 import { getAnimalsByType } from "../services/PetfinderApi";
-import { Favorites } from "./Favorites";
-import { Dog } from "../models/Dog";
 import "../App.css";
 
 export function ProfileItem() {

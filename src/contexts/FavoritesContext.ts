@@ -2,13 +2,13 @@ import { createContext } from "react";
 import { Animals } from "../models/Animals";
 
 interface FavoritesContext {
-    favoriteDogs: Animals[];
+    dogs: Animals[];
     addFavorite: (dog: Animals) => void;
     removeFavorite: (id: number) => void;
 }
 
 const defaultValue: FavoritesContext = {
-    favoriteDogs: [],
+    dogs: [],
     addFavorite: () => {},
     removeFavorite: () => {}
 }

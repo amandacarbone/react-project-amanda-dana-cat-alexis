@@ -4,7 +4,7 @@ import { ProfileItem } from "./ProfileItem";
 
 export function Profiles() {
 
-    const { favoriteDogs } = useContext(FavoritesContext);
+    const { dogs } = useContext(FavoritesContext);
 
   return (
     <div>
