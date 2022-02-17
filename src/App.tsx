@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './App.css';
 import { NavLink, Outlet } from "react-router-dom";
 import SlidingPane from "react-sliding-pane";
+import { ToastContainer } from 'react-toastify';
+import './App.css';
 import "react-sliding-pane/dist/react-sliding-pane.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -35,6 +37,8 @@ function App() {
       </SlidingPane>
 
       </div>
+
+      <ToastContainer/>
 
     </div>
   );

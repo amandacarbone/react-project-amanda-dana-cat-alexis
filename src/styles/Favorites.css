@@ -3,7 +3,7 @@
 }
 
 .favoritesItem {
-    background-color: #97533d;
+    background-color: #FFFFFF;
     transform: translateX(-100px);
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -15,7 +15,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    color: #FFFFFF;
+    color: #000000;
     padding: 10px;
 }
 
@@ -27,5 +27,5 @@
 }
 
 .favoritesItem .material-icons {
-    color: #FFFFFF;
+    color: #000000;
 }
