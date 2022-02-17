@@ -49,3 +49,8 @@ div.doggyDetails {
 h2.name {
   text-shadow: 6px 6px 6px #705a56;
 }
+
+h1 {
+  color: #f2f0ee;
+  background-color: #a5b462;
+}

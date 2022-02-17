@@ -1,27 +1,21 @@
-import { useContext } from "react"
-import FavoritesContext from "../contexts/FavoritesContext"
+import { useContext } from "react";
+import FavoritesContext from "../contexts/FavoritesContext";
+import { ProfileItem } from "./ProfileItem";
 
-export function Favorites(){
+export function Favorites() {
+  const { favoriteDogs, removeFavorite } = useContext(FavoritesContext);
 
-    const { favoriteDogs, removeFavorite } = useContext(FavoritesContext);
+  function showRemoveButton() {}
 
-    function showRemoveButton() {
-        
-    }
+  return (
+    <div>
+      <h2>Favorites</h2>
 
-    return(
-        <div>
-            
-            <h2>Favorites</h2>
-
-            <ul>
-            {favoriteDogs.map(favoriteDog => {
-                <li key={favoriteDog.id}>
-                    {favoriteDog.name}
-                </li>
-            })}
-            </ul>
-
-        </div>
-    )
+      <ul>
+        {favoriteDogs.map((dog) => (
+          <ProfileItem key={dog.id} dog={dog}></ProfileItem>
+        ))}
+      </ul>
+    </div>
+  );
 }
