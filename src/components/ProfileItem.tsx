@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import FavoritesContext from "../contexts/FavoritesContext";
 import { Animals } from "../models/Animals";
-import { getAnimalsByType } from "../services/PetfinderApi";
 import "../App.css";
 
 interface Props {
@@ -74,21 +73,21 @@ export function ProfileItem(props: Props) {
           <p>Age: {dog?.age}</p>
           <p>Size: {dog?.size}</p>
           <p>Gender: {dog?.gender}</p>
-          <p>Fixed: {dog?.attributes.spayed_neutered ? "true" : "false"}</p>
-          <p>Shots: {dog?.attributes.shots_current ? "true" : "false"}</p>
+          <p>Fixed: {dog?.attributes.spayed_neutered ? "Yes" : "No"}</p>
+          <p>Shots Current: {dog?.attributes.shots_current ? "Yes" : "No"}</p>
           <p>
-            Good With Children: {dog?.environment.children ? "true" : "false"}
+            Good With Children: {dog?.environment.children ? "Yes" : "No"}
           </p>
           <p>Description: {dog?.description}</p>
         </div>
         <div className="carousel">
-          <button className="button-left" onClick={handleLeftClick}>
+          <button className="button-left" onClick={props.handleLeftClick}>
             Prev
           </button>
-          <button className="button-right" onClick={handleRightClick}>
+          <button className="button-right" onClick={props.handleRightClick}>
             Next
           </button>
-          <button onClick={() => addFavorite(dog)}>Add to Favorites</button>
+          <button onClick={() => addFavorite(props.dog)}>Add to Favorites</button>
         </div>
       </div>
     </div>

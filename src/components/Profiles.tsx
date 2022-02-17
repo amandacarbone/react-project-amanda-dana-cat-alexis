@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { isPropertySignature } from "typescript";
 import FavoritesContext from "../contexts/FavoritesContext";
 import { Animals } from "../models/Animals";
 import { getAnimalsByType } from "../services/PetfinderApi";
@@ -52,8 +51,7 @@ export function Profiles() {
 
   return (
     <div>
-        {favoriteDogs.map((dog) =>
-          <ProfileItem handleRightClick={() =>  {}} handleLeftClick={() =>  {}} key={dog.id} dog={dog}></ProfileItem>)}
+        <ProfileItem dog={selectedDog} handleLeftClick={handleLeftClick} handleRightClick={handleRightClick}></ProfileItem>
     </div>
   );
 }
