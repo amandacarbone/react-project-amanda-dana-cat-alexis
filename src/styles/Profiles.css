@@ -1,79 +1,86 @@
+.App {
+  width: 100%;
+  height: 100%;
+}
+.selectedImage {
+  background-color: #97533d;
+}
 .carouselContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #97533d;
-    color: #f2f0ee;
-    height: 110vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #97533d;
+  color: #f2f0ee;
+  height: 110vh;
 }
 
 .selectedImage {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .selectedImage img {
-    height: 400px;
-    width: 400px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 15%;
+  height: 400px;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15%;
 }
 
 .carouselNav .material-icons {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #FFFFFF;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .detailsContainer {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 10%;
-    margin: 10px;
-    padding: 10px;
-    height: 30%;
-    width: 70%;
-    overflow-y: scroll;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10%;
+  margin: 10px;
+  padding: 10px;
+  height: 30%;
+  width: 70%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-  
+
 .details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 2px 2px 2px #705a56;
-    margin-top: -10px;
-    margin-bottom: -5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px 2px #705a56;
+  margin-top: -10px;
+  margin-bottom: -5px;
 }
 
 .details h3 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .details p {
-    margin: 5px;
+  margin: 5px;
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .description p {
-    text-align: center;
-    width: 50%;
-    margin-top: -5px;
-    overflow-y: scroll hidden;
+  text-align: center;
+  width: 50%;
+  margin-top: -5px;
+  overflow-y: scroll hidden;
 }
-  
+
 h2.name {
-    text-shadow: 6px 6px 6px #705a56;
+  text-shadow: 6px 6px 6px #705a56;
 }
