@@ -1,12 +1,13 @@
-div.carouselContainer {
+.carouselContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #97533d;
     color: #f2f0ee;
+    height: 105vh;
 }
 
-div.selectedImage {
+.selectedImage {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -23,29 +24,33 @@ div.selectedImage {
     cursor: pointer;
     color: #FFFFFF;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.detailsContainer {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 15%;
+    margin: 10px;
+    height: 100%;
+    width: 90%;
+}
+
+.detailsContainer h3 {
+    text-align: center;
 }
   
-.detailsRow1 {
+.details {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-shadow: 2px 2px 2px #705a56;
-}
-
-.detailsRow2 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-shadow: 2px 2px 2px #705a56;
-}
-
-.detailsRow1 p {
-    padding: 10px;
-}
-
-.detailsRow2 p {
     margin-top: -10px;
-    padding: 10px;
+    margin-bottom: -5px;
+}
+
+.details p {
+    margin: 5px;
 }
 
 .description {
@@ -53,12 +58,14 @@ div.selectedImage {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .description p {
     text-align: center;
     width: 50%;
     margin-top: -5px;
+    overflow-y: scroll hidden;
 }
   
 h2.name {
