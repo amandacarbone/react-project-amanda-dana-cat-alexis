@@ -10,44 +10,21 @@
   flex-direction: column;
   text-decoration: none;
   margin: 10px;
+  color: #000000;
+  font-size: 30px;
+}
+
+.nav a:hover {
+  color: #f2f0ee;
+  background-color: #a5b462;
+  width: 100%;
 }
 
 .material-icons {
   background: none;
   border: none;
   cursor: pointer;
-}
-
-div.carousel-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #97533d;
-  color: #f2f0ee;
-}
-
-button {
-  color: #f2f0ee;
-  background-color: #a5b462;
-  text-shadow: 2px 2px 2px #705a56;
-  padding: 3%;
-  border-radius: 15px;
-}
-div.selected-image {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-div.doggyDetails {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-shadow: 2px 2px 2px #705a56;
-}
-
-h2.name {
-  text-shadow: 6px 6px 6px #705a56;
+  color: #000000;
 }
 
 h1 {

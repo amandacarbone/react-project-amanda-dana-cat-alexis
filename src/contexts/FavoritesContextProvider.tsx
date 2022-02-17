@@ -6,8 +6,8 @@ export function FavoritesContextProvider(props: { children: ReactNode }){
 
     const [favoriteDogs, setFavoriteDogs] = useState<Animals[]>([]);
 
-    function addFavorite(dog: Animals) {
-        setFavoriteDogs([...favoriteDogs, dog]);
+    function addFavorite(favoriteDog: Animals) {
+        setFavoriteDogs([...favoriteDogs, favoriteDog]);
     }
 
     function removeFavorite(id: number) {

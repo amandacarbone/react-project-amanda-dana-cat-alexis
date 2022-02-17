@@ -5,6 +5,7 @@ import { getAnimalsByType } from "../services/PetfinderApi";
 import { ProfileItem } from "./ProfileItem";
 
 export function Profiles() {
+  
   const { favoriteDogs } = useContext(FavoritesContext);
   const [dogs, setDogs] = useState<Animals[]>([]);
   const [selectedDogIndex, setSelectedDogIndex] = useState(0);

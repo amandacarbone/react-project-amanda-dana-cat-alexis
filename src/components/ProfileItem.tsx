@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import FavoritesContext from "../contexts/FavoritesContext";
 import { Animals } from "../models/Animals";
-import "../App.css";
+import "../styles/Profiles.css";
 
 interface Props {
   dog: Animals;
@@ -19,31 +19,38 @@ export function ProfileItem(props: Props) {
   }, [props]);
 
   return (
-    <div className="carousel-container">
-      <h2 className="name">{dog?.name}</h2>
-      <div className="selected-image">
+    <div className="carouselContainer">
+      <h2 className="name" key={dog?.id}>{dog?.name}</h2>
+      <div className="selectedImage">
         <img src={
             dog?.primary_photo_cropped?.small &&
             dog?.primary_photo_cropped?.medium &&
             dog?.primary_photo_cropped?.large
           }/>
-        <div className="doggyDetails" key={dog?.id}>
+        <div className="carouselNav">
+          <button className="material-icons" onClick={props.handleLeftClick}>
+            arrow_back_ios
+          </button>
+          <button className="material-icons" onClick={() => addFavorite(dog)}>
+            favorite
+          </button>
+          <button className="material-icons" onClick={props.handleRightClick}>
+            arrow_forward_ios
+          </button>
+        </div>
+        <div className="detailsRow1">
           <p>Age: {dog?.age}</p>
           <p>Size: {dog?.size}</p>
           <p>Gender: {dog?.gender}</p>
+        </div>
+        <div className="detailsRow2">
           <p>Fixed: {dog?.attributes.spayed_neutered ? "Yes" : "No"}</p>
           <p>Shots Current: {dog?.attributes.shots_current ? "Yes" : "No"}</p>
           <p>Good With Children: {dog?.environment.children ? "Yes" : "No"}</p>
-          <p>Description: {dog?.description}</p>
         </div>
-        <div className="carousel">
-          <button className="button-left" onClick={props.handleLeftClick}>
-            Prev
-          </button>
-          <button className="button-right" onClick={props.handleRightClick}>
-            Next
-          </button>
-          <button onClick={() => addFavorite(props.dog)}>Add to Favorites</button>
+        <div className="description">
+          <h3>About</h3>
+          <p>{dog?.description}</p>
         </div>
       </div>
     </div>

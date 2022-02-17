@@ -3,7 +3,7 @@ import { Animals } from "../models/Animals";
 
 interface FavoritesContext {
     favoriteDogs: Animals[];
-    addFavorite: (dog: Animals) => void;
+    addFavorite: (favoriteDog: Animals) => void;
     removeFavorite: (id: number) => void;
 }
 

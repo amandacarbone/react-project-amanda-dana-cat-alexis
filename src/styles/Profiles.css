@@ -1,0 +1,66 @@
+div.carouselContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #97533d;
+    color: #f2f0ee;
+}
+
+div.selectedImage {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selectedImage img {
+    height: 400px;
+    width: 400px;
+}
+
+.carouselNav .material-icons {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+  
+.detailsRow1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-shadow: 2px 2px 2px #705a56;
+}
+
+.detailsRow2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-shadow: 2px 2px 2px #705a56;
+}
+
+.detailsRow1 p {
+    padding: 10px;
+}
+
+.detailsRow2 p {
+    margin-top: -10px;
+    padding: 10px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description p {
+    text-align: center;
+    width: 50%;
+    margin-top: -5px;
+}
+  
+h2.name {
+    text-shadow: 6px 6px 6px #705a56;
+}
