@@ -4,20 +4,20 @@ import FavoritesContext from "./FavoritesContext";
 
 export function FavoritesContextProvider(props: { children: ReactNode }){
 
-    const [dogs, setFavoriteDogs] = useState<Animals[]>([]);
+    const [favoriteDogs, setFavoriteDogs] = useState<Animals[]>([]);
 
     function addFavorite(dog: Animals) {
-        setFavoriteDogs([...dogs, dog]);
+        setFavoriteDogs([...favoriteDogs, dog]);
     }
 
     function removeFavorite(id: number) {
-        setFavoriteDogs(dogs.filter(d => d.id != id));
+        setFavoriteDogs(favoriteDogs.filter(f => f.id != id));
     }
 
     return(
         <div>
 
-        <FavoritesContext.Provider value={{dogs, addFavorite, removeFavorite}}>
+        <FavoritesContext.Provider value={{favoriteDogs, addFavorite, removeFavorite}}>
             {props.children}
         </FavoritesContext.Provider>
 

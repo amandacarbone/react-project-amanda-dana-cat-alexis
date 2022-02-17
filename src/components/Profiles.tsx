@@ -4,11 +4,12 @@ import { ProfileItem } from "./ProfileItem";
 
 export function Profiles() {
 
-    const { dogs } = useContext(FavoritesContext);
+  const { favoriteDogs } = useContext(FavoritesContext);
 
   return (
     <div>
-        <ProfileItem></ProfileItem>
+        {favoriteDogs.map(dog =>
+          <ProfileItem key={dog.id} dog={dog}></ProfileItem>)}
     </div>
   );
 }

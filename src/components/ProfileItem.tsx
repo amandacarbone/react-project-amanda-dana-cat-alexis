@@ -4,7 +4,11 @@ import { Animals } from "../models/Animals";
 import { getAnimalsByType } from "../services/PetfinderApi";
 import "../App.css";
 
-export function ProfileItem() {
+interface Props {
+  dog: Animals;
+}
+
+export function ProfileItem({dog}: Props) {
   const [dogs, setDogs] = useState<Animals[]>([]);
 
   const { addFavorite } = useContext(FavoritesContext);
@@ -86,7 +90,7 @@ export function ProfileItem() {
           <button className="button-right" onClick={handleRightClick}>
             Next
           </button>
-          <button>Add to Favorites</button>
+          <button onClick={() => addFavorite(dog)}>Add to Favorites</button>
         </div>
       </div>
     </div>

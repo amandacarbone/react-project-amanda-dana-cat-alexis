@@ -3,7 +3,7 @@ import FavoritesContext from "../contexts/FavoritesContext"
 
 export function Favorites(){
 
-    const { dogs, removeFavorite } = useContext(FavoritesContext);
+    const { favoriteDogs, removeFavorite } = useContext(FavoritesContext);
 
     function showRemoveButton() {
         
@@ -15,9 +15,9 @@ export function Favorites(){
             <h2>Favorites</h2>
 
             <ul>
-            {dogs.map(dog => {
-                <li key={dog.id}>
-                    {dog.name}
+            {favoriteDogs.map(favoriteDog => {
+                <li key={favoriteDog.id}>
+                    {favoriteDog.name}
                 </li>
             })}
             </ul>
