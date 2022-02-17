@@ -1,0 +1,18 @@
+
+.searchedDog{
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px
+}
+
+.searchedDogName{
+    font-size: large;
+    font-weight: bold;
+}
+
+.searchedDogPic{
+    height: 200px;
+    width: 200px;
+}
