@@ -1,4 +1,5 @@
 import axios from "axios";
+import { stringify } from "querystring";
 import { Animals } from "../models/Animals";
 
 export function login() {
@@ -48,6 +49,30 @@ export async function getAnimalsByType(type: string) {
     (dog: Animals): boolean => dog.primary_photo_cropped !== null
   );
 }
+
+export async function getSearchedDogs(gender:string, size: string, age: string, //attributes: {spayed_neutered: boolean}
+  ) {
+  const accessToken = await login();
+
+  const response = await axios.get("https://api.petfinder.com/v2/animals", {
+    params: {
+      gender: gender,
+      size: size,
+      age: age,
+      //attributes: {
+      //  spayed_neutered: spayed_neutered
+      //}
+
+    },
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+  return response.data.animals.filter(
+    (dog: Animals): boolean => dog.primary_photo_cropped !== null
+  );
+}
+
 
 // const credentials = {
 //     client: {

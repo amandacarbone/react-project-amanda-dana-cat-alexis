@@ -13,7 +13,7 @@ export function Favorites() {
 
       <ul>
         {favoriteDogs.map((dog) => (
-          <ProfileItem key={dog.id} dog={dog}></ProfileItem>
+          <ProfileItem handleRightClick={() =>  {}} handleLeftClick={() =>  {}} key={dog.id} dog={dog}></ProfileItem>
         ))}
       </ul>
     </div>

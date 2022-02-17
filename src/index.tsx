@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Search } from './components/SearchForm';
+import { SearchDropDown } from './components/SearchForm';
 import { Favorites } from './components/Favorites';
 import { Profiles } from './components/Profiles';
 import { LogIn } from './components/LogIn';
@@ -17,7 +17,7 @@ ReactDOM.render(
     <Routes>
       <Route path="/" element={<Profiles/>} />
       <Route path="/home" element={<Profiles/>} />
-      <Route path="/search" element={<Search/>} />
+      <Route path="/search" element={<SearchDropDown/>} />
       <Route path="/favorites" element={<Favorites/>} />
       <Route path="/login" element={<LogIn/>} />
     </Routes>
