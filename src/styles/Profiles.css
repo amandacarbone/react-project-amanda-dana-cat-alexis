@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #97533d;
     color: #f2f0ee;
-    height: 105vh;
+    height: 110vh;
 }
 
 .selectedImage {
@@ -32,12 +32,9 @@
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 15%;
     margin: 10px;
+    padding: 10px;
     height: 100%;
     width: 90%;
-}
-
-.detailsContainer h3 {
-    text-align: center;
 }
   
 .details {
@@ -48,6 +45,10 @@
     text-shadow: 2px 2px 2px #705a56;
     margin-top: -10px;
     margin-bottom: -5px;
+}
+
+.details h3 {
+    margin-bottom: 10px;
 }
 
 .details p {

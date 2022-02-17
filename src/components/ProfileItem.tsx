@@ -39,8 +39,8 @@ export function ProfileItem(props: Props) {
           </button>
         </div>
         <div className="detailsContainer">
-          <h3>Details</h3>
           <div className="details">
+            <h3>Details</h3>
             <p>Age: {dog?.age}</p>
             <p>Size: {dog?.size}</p>
             <p>Gender: {dog?.gender}</p>
