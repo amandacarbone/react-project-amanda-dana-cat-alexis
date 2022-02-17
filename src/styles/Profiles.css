@@ -16,6 +16,7 @@
 .selectedImage img {
     height: 400px;
     width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .carouselNav .material-icons {
@@ -29,6 +30,7 @@
 
 .detailsContainer {
     background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 15%;
     margin: 10px;
     height: 100%;
