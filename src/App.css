@@ -9,6 +9,9 @@
   box-shadow: 0px, 0px, 3px, 0px;
 }
 
+body {
+  background-color: #97533d;
+}
 .nav a {
   display: flex;
   flex-direction: column;

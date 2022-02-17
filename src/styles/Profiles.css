@@ -2,14 +2,11 @@
   width: 100%;
   height: 100%;
 }
-.selectedImage {
-  background-color: #97533d;
-}
+
 .carouselContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #97533d;
   color: #f2f0ee;
   height: 110vh;
 }
@@ -36,16 +33,20 @@
   margin-bottom: 10px;
 }
 
+.carouselNav button.material-icons :hover {
+  color: #a5b462;
+}
+
 .detailsContainer {
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10%;
   margin: 10px;
   padding: 10px;
-  height: 30%;
-  width: 70%;
-  overflow-y: scroll;
+  /* height: 30%; */
+  width: 400px;
+  /* overflow-y: scroll;
   -ms-overflow-style: none;
-  scrollbar-width: none;
+  scrollbar-width: none; */
 }
 
 .details {
