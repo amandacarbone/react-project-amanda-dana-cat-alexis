@@ -56,6 +56,7 @@ export async function getSearchedDogs(gender:string, size: string, age: string, 
 
   const response = await axios.get("https://api.petfinder.com/v2/animals", {
     params: {
+      type: "Dog",
       gender: gender,
       size: size,
       age: age,
@@ -69,7 +70,7 @@ export async function getSearchedDogs(gender:string, size: string, age: string, 
     },
   });
   return response.data.animals.filter(
-    (dog: Animals): boolean => dog.primary_photo_cropped !== null
+    (dog: Animals): boolean => dog.primary_photo_cropped !== null 
   );
 }
 

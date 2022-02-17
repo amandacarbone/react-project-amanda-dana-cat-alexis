@@ -10,8 +10,6 @@ export function SearchDropDown() {
    const [size, setSize] = useState("")
    
 
-
-
     return (
         <div>
 
@@ -37,7 +35,8 @@ export function SearchDropDown() {
                 <option value="adult">Adult</option>
                 <option value="senior">Senior</option>
             </select>
-    {/*
+            
+            {/*
             <select onChange={()=>{}}>
                 <option selected>Spay/Neutered</option>
                 <option value="yes">Yes</option>

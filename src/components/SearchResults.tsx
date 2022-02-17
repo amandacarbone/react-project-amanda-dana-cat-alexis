@@ -30,8 +30,8 @@ export function SearchResults({gender, age, size}: SearchProps){
 
     return(
         <div>
-             {searchedDogs.map((dog)=> <SearchResultItem animal={dog} key = {dog.id} />)}
-            {/** // dog.name)} */}
+             {searchedDogs.map((dog)=> <SearchResultItem dog={dog} key = {dog.id} />)}
+           
         </div>
     )
 }
