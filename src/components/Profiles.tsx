@@ -52,7 +52,8 @@ export function Profiles() {
 
   return (
     <div>
-      <ProfileItem dog={selectedDog}></ProfileItem>
+        {favoriteDogs.map((dog) =>
+          <ProfileItem handleRightClick={() =>  {}} handleLeftClick={() =>  {}} key={dog.id} dog={dog}></ProfileItem>)}
     </div>
   );
 }
