@@ -41,9 +41,7 @@ export function ProfileItem(props: Props) {
         <div className="detailsContainer">
           <div className="details">
             <h3>Details</h3>
-            <p>Age: {dog?.age}</p>
-            <p>Size: {dog?.size}</p>
-            <p>Gender: {dog?.gender}</p>
+            <p>{dog?.age} | {dog?.gender} | {dog?.size}</p>
             <p>Fixed: {dog?.attributes.spayed_neutered ? "Yes" : "No"}</p>
             <p>Shots Current: {dog?.attributes.shots_current ? "Yes" : "No"}</p>
             <p>Good With Children: {dog?.environment.children ? "Yes" : "No"}</p>
