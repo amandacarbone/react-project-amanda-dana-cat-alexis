@@ -9,15 +9,16 @@ interface AnimalsProp {
 
 export function SearchResultItem({ dog }: AnimalsProp) {
 
+
+
+
+
     return (
-        <div>
+        <div className="searchedDogComponent">
 
             <div className="searchedDog">
-                <div className="searchedDogName">
-                    {dog.name}
-                </div>
 
-                <div >
+               
                     <img className="searchedDogPic"
                         src={
                             dog?.primary_photo_cropped?.small &&
@@ -25,7 +26,18 @@ export function SearchResultItem({ dog }: AnimalsProp) {
                             dog?.primary_photo_cropped?.large
                         }
                     />
+                
+                <div className = "searchedDogInfo">
+                <div className="searchedDogName">
+                    {dog.name}
                 </div>
+
+                <div className="searchedDogDetails">
+                    <p>{dog.gender} | {dog.age} | {dog.size}</p>
+                </div>
+                </div>
+
+
             </div>
 
         </div>
