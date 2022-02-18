@@ -1,18 +1,63 @@
 
-.searchedDog{
-    border: 1px solid black;
-    height: 300px;
-    width: 300px;
+.searchPageHeader{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #f2f0ee;
+    text-shadow: 6px 6px 6px #705a56;
+}
+
+.searchDropDowns{
+    margin: 20px, 30px, 20px, 30px; 
+    padding: 0px;
+    
+}
+
+.searchDropDowns select{
+    margin: 5px;
+    width: 110px;
+}
+.searchDropDowns label{
+    margin: 5px;
+}
+
+.searchedDogComponent{
     margin: 10px;
-    padding: 10px
+    display: flex;
+    justify-content: center;
+}
+
+.searchedDog{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
 }
 
 .searchedDogName{
-    font-size: large;
+    font-size: 30px;
     font-weight: bold;
+    text-shadow: 6px 6px 6px #705a56;
+    color: #f2f0ee;
+    padding: 5px;
+    margin: 5px
+}
+
+.searchedDogDetails{
+    color: #f2f0ee;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px
 }
 
 .searchedDogPic{
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
