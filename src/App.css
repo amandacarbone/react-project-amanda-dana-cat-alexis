@@ -9,9 +9,6 @@
   box-shadow: 0px, 0px, 3px, 0px;
 }
 
-body {
-  background-color: #97533d;
-}
 .nav a {
   display: flex;
   flex-direction: column;
@@ -32,9 +29,4 @@ body {
   border: none;
   cursor: pointer;
   color: #000000;
-}
-
-h1 {
-  color: #f2f0ee;
-  padding: 5px;
 }
