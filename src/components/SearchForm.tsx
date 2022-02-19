@@ -20,13 +20,13 @@ export function SearchDropDown() {
             <div className="searchDropDowns">
                 <label >Search by: </label>
                 <select onChange={(event) => { setGender(event.target.value) }}>
-                    <option selected>Gender  </option>
+                    <option defaultValue= "gender">Gender  </option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
 
                 <select onChange={(event) => { setSize(event.target.value) }}>
-                    <option selected>Size</option>
+                    <option defaultValue ="size">Size</option>
                     <option value="small">Small 0-25 lb</option>
                     <option value="medium">Medium 26-60 lb</option>
                     <option value="large">Large 61-100 lb</option>
@@ -34,7 +34,7 @@ export function SearchDropDown() {
                 </select>
 
                 <select onChange={(event) => { setAge(event.target.value) }} >
-                    <option selected>Age</option>
+                    <option defaultValue="age">Age</option>
                     <option value="young">Young</option>
                     <option value="adult">Adult</option>
                     <option value="senior">Senior</option>

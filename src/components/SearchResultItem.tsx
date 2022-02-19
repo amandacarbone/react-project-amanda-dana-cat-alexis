@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Animals } from "../models/Animals";
 import "../styles/SearchResultItem.css"
 
@@ -9,11 +10,11 @@ interface AnimalsProp {
 
 export function SearchResultItem({ dog }: AnimalsProp) {
 
-
-
-
+  
 
     return (
+
+        <Link to = {`/profile/${dog.id}`}>
         <div className="searchedDogComponent">
 
             <div className="searchedDog">
@@ -41,5 +42,6 @@ export function SearchResultItem({ dog }: AnimalsProp) {
             </div>
 
         </div>
+        </Link>
     )
 }

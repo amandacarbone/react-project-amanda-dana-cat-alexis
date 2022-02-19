@@ -9,6 +9,7 @@ import { Profiles } from './components/Profiles';
 import { LogIn } from './components/LogIn';
 import { FavoritesContextProvider } from './contexts/FavoritesContextProvider';
 import { SignUp } from './components/SignUp';
+import { ProfileItem } from './components/ProfileItem';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.render(
           <Route path="/home" element={<Profiles />} />
           <Route path="/search" element={<SearchDropDown />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/profile/:id" element={<Profiles />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>

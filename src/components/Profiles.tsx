@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import FavoritesContext from "../contexts/FavoritesContext";
 import { Animals } from "../models/Animals";
 import { getAnimalsByType } from "../services/PetfinderApi";
@@ -10,18 +11,28 @@ export function Profiles() {
   const [dogs, setDogs] = useState<Animals[]>([]);
   const [selectedDogIndex, setSelectedDogIndex] = useState(0);
   const [selectedDog, setSelectedDog] = useState<any>();
+  const id: number | undefined = parseInt(useParams().id!) || undefined;
+  console.log(id)
 
   useEffect(() => {
     getAnimalsByType("dog").then((newDogs: Animals[]) => {
       setDogs(newDogs);
-      setSelectedDog(newDogs[0]);
-      console.log(newDogs);
+      if (id) {
+        const foundDog = newDogs.find((dog)=>dog.id===id)
+        setSelectedDog(foundDog)
+        
+      }else{
+      setSelectedDog(newDogs[0])
+      
+      }
     });
 
     if (dogs && dogs[0]) {
       setSelectedDogIndex(0);
       setSelectedDog(dogs[0]);
     }
+
+    
   }, []);
 
   const handleRightClick = () => {
