@@ -8,7 +8,7 @@ export function SignUp() {
     const [confirmPassword, setConfirmPassword] = useState('');
 
     return (
-        <div>
+        <div className="loginContainer">
             <form>
                 <h1>Sign Up</h1>
                 <label>
@@ -24,11 +24,11 @@ export function SignUp() {
                     <input type="confirmPassword" onChange={e => setConfirmPassword(e.target.value)} />
                 </label>
                 <div>
-                    <h5>Already have an account?</h5>
-                    <Link to="/login">Log In</Link>
+                    <label>Already have an account?</label>
+                    <Link className="link" to="/login">Log In</Link>
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button className="button" type="submit">Submit</button>
                 </div>
             </form>
         </div>
