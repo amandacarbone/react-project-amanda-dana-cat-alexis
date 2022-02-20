@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import FavoritesContext from "../contexts/FavoritesContext";
 import "../styles/Favorites.css";
@@ -6,16 +7,6 @@ import "../styles/Favorites.css";
 export function Favorites() {
 
   const { favoriteDogs, removeFavorite } = useContext(FavoritesContext);
-
-  const favoriteRemoved = () => toast.error("Favorite Removed", {
-    position: "top-right",
-    autoClose: 900,
-    hideProgressBar: true,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    progress: undefined,
-  });
 
   function showRemoveButton() {
     let foundItem = favoriteDogs.find((dog) => dog.id)
@@ -35,16 +26,18 @@ export function Favorites() {
 
       {favoriteDogs.map((dog) => (
         <ul key={dog.id}>
+        <Link to={`/profile/${dog.id}`}>
         <li><img src={
           dog?.primary_photo_cropped?.small &&
           dog?.primary_photo_cropped?.medium &&
           dog?.primary_photo_cropped?.large}/>
         </li>
+        </Link>
+        <Link to={`/profile/${dog.id}`}>
         <li><h3>{dog.name}</h3></li>
+        </Link>
         <button className={showRemoveButton() === true ? "material-icons" : "hide"} 
-                onClick={() => {
-                  removeFavorite(dog.id)
-                  favoriteRemoved()}}>cancel</button>
+                onClick={() => removeFavorite(dog.id)}>cancel</button>
         </ul>
       ))}
 

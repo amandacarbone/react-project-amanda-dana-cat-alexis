@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import { toast } from "react-toastify";
 import FavoritesContext from "../contexts/FavoritesContext";
 import { Animals } from "../models/Animals";
 import "../styles/Profiles.css";
@@ -11,19 +10,10 @@ interface Props {
 }
 
 export function ProfileItem(props: Props) {
+  
   const { addFavorite } = useContext(FavoritesContext);
 
   const [dog, setDog] = useState(props.dog);
-
-  const favoriteAdded = () => toast.success("Favorite Added", {
-    position: "top-right",
-    autoClose: 900,
-    hideProgressBar: true,
-    closeOnClick: true,
-    pauseOnHover: false,
-    draggable: true,
-    progress: undefined,
-  });
 
   useEffect(() => {
     setDog(props.dog);
@@ -42,9 +32,7 @@ export function ProfileItem(props: Props) {
           <button className="material-icons" onClick={props.handleLeftClick}>
             arrow_back_ios
           </button>
-          <button className="material-icons" onClick={() => {
-            addFavorite(dog)
-            favoriteAdded()}}>
+          <button className="material-icons" onClick={() => addFavorite(dog)}>
             favorite
           </button>
           <button className="material-icons" onClick={props.handleRightClick}>

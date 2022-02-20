@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import "../styles/LogInSignUp.css";
 
 
@@ -7,6 +8,29 @@ export function LogIn() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    const loginError = () => toast.error("Invalid email or password", {
+        position: "top-right",
+        autoClose: 900,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+    });
+    
+    function handleSubmit(e: any) {
+        
+        e.preventDefault();
+
+        if(email.length === 0 && password.length > 8) {
+            loginError();
+            return;
+        } else {
+            navigate("/home");
+        }
+    }
 
     return (
         <div className="loginContainer">
@@ -29,7 +53,7 @@ export function LogIn() {
 
 
                 <div>
-                    <button className="button" type="submit">Submit</button>
+                    <button className="button" type="submit" onClick={handleSubmit}>Submit</button>
                 </div>
             </form>
         </div>

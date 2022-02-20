@@ -28,6 +28,23 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.favoritesItem a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.favoritesItem a:hover {
+    color: #a5b462;
+}
+
 .favoritesItem .material-icons {
     color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+
+    .favoritesItem {
+        width: 50%;
+    }
+
 }
