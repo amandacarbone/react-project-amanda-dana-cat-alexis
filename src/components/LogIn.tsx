@@ -24,7 +24,7 @@ export function LogIn() {
         
         e.preventDefault();
 
-        if(email.length === 0 && password.length > 8) {
+        if(email.length === 0 && password.length === 0) {
             loginError();
             return;
         } else {
