@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-project-amanda-dana-cat-alexis/static/css/main.312fd64a.css",
+    "main.js": "/react-project-amanda-dana-cat-alexis/static/js/main.60c22264.js",
+    "index.html": "/react-project-amanda-dana-cat-alexis/index.html",
+    "main.312fd64a.css.map": "/react-project-amanda-dana-cat-alexis/static/css/main.312fd64a.css.map",
+    "main.60c22264.js.map": "/react-project-amanda-dana-cat-alexis/static/js/main.60c22264.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.312fd64a.css",
+    "static/js/main.60c22264.js"
+  ]
+}
