@@ -1,4 +1,4 @@
-# Welcome to Rin-Tin-Tinder!
+# Rin-Tin-Tinder
 
 A tinder inspired PetFinder clone, where you can search for shelter dogs that match your needs and store a list of your favorites! Preview available in GitHubPages (scroll down to environments)
 
@@ -17,7 +17,7 @@ In the project directory, you can run:
 
 ## `npm start`
 
-# Contributers
+# Contributors
 
 a-brown77 \
 amandacarbone\
