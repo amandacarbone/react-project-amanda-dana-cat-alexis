@@ -19,7 +19,7 @@ In the project directory, you can run:
 
 # Contributors
 
-a-brown77 \
-amandacarbone\
-riverscd\
-lavendermoose
+[a-brown77](https://github.com/a-brown77)\
+[amandacarbone](https://github.com/amandacarbone)\
+[riverscd](https://github.com/riverscd)\
+[lavendermoose](https://github.com/lavendermoose)
